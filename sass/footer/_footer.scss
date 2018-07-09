@@ -1,7 +1,219 @@
 #colophon {
  color: #fff;
+ font-family: $font__reg;
+ text-align: center;
+//  font-size: .1rem;
+ border: 1px solid red;
 
  a {
    color: #fff;
+ }
+
+ .footer-wrapper {
+   @include padding-left-right;
+   @include section-padding(2);
+ }
+
+ .flex-wrapper {
+   @include respond-to(small) {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+ }
+
+ .logo, .social, .copyright {
+   margin-bottom: 1em;
+
+   @include respond-to(small) {
+     margin-bottom: 0;
+   }
+ }
+
+ .logo {
+
+    svg {
+      width: 200px;
+      height: 45px;
+    }
+
+    @include respond-to(small) {
+      flex: 1 1 20%;
+      text-align-last: left;
+    }
+ }
+
+ .social {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .social-header {
+      font-size: 0.875rem;
+      padding-right: 1rem;
+    }
+
+    .social-media {
+      //  @include test(yellow);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+
+      a {
+        display: block;
+        text-indent: 110%;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 35px;
+        height: 35px;
+        background-image: url(imgs/sprite-social-media-icons.svg);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        transition: transform 125ms;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+     }
+
+     .fb {
+       a {
+         background-position: -4px 0;
+         width: 27px;
+       }
+     }
+
+     .tw {
+       a {
+         background-position: -34px 0;
+       }
+     }
+
+     .goo {
+       a {
+         background-position: -68px 0;
+         width: 40px;
+       }
+     }
+
+     .linked {
+       a {
+         background-position: -108px 0;
+         width: 30px;
+       }
+     }
+
+     .yt {
+       a {
+         background-position: -140px 0;
+         width: 40px;
+       }
+     }
+
+     .pin {
+       a {
+         width: 27px;
+         background-position: -179px 0;
+       }
+     }
+
+     .insta {
+       a {
+         background-position: -210px 0;
+       }
+     }
+
+     @include respond-to(large) {
+       a {
+         width: 50px;
+         height: 50px;
+       }
+
+       .fb {
+         a {
+           background-position: -10px 0;
+           width: 32px;
+         }
+       }
+
+       .tw {
+         a {
+           background-position: -50px 0;
+         }
+       }
+
+       .goo {
+         a {
+           background-position: -97px 0;
+           width: 55px;
+         }
+       }
+
+       .linked {
+         a {
+           background-position: -155px 0;
+           width: 40px;
+         }
+       }
+
+       .yt {
+         a {
+           background-position: -201px 0;
+           width: 49px;
+         }
+       }
+
+       .pin {
+         a {
+           width: 42px;
+           background-position: -255px 0;
+         }
+       }
+
+       .insta {
+         a {
+           background-position: -305px 0;
+           width: 40px;
+         }
+       }
+     }
+   }
+
+   @include respond-to(small) {
+     flex: 1 1 30%;
+     text-align: center;
+   }
+ }
+
+ .copyright {
+   font-size: 0.875rem;
+
+   @include respond-to(small) {
+     flex: 1 1 30%;
+     text-align: right;
+   }
+
+   @include respond-to(medium) {
+     font-size: .8rem;
+   }
+ }
+
+ .mm4 {
+   font-size: 0.75rem;
+
+   a {
+     text-decoration: none;
+   }
+   svg {
+     margin-left: 1em;
+   }
+
+   @include respond-to(small) {
+     flex: 0 0 100%;
+     text-align: right;
+   }
  }
 }

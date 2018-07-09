@@ -3,17 +3,38 @@
     color: #fff;
     position: relative;
     z-index: 1000;
+    margin-bottom: -4em;
+
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      z-index: 2000;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $color__background-overlay;
+      opacity: .6;
+    }
 
     video {
+      padding: 20em 0;
+      background-color: #000;
       width: 100%;
       position: relative;
       z-index:-1;
       display: block;
+
+      @include respond-to(x-small) {
+        padding: 0;
+
+      }
     }
 
     .hero-wrapper {
       position: absolute;
-      z-index: 2000;
+      z-index: 3000;
       width: 100%;
       top: 55%;
       left: 50%;
@@ -26,6 +47,11 @@
         display: flex;
         justify-content: space-around;
       }
+    }
+
+    .hero-title {
+      font-family: $font__black;
+      text-transform: uppercase;
     }
 
     .hero-callout-left {
@@ -46,11 +72,8 @@
   }
 
   #content {
-    position: absolute;
-    z-index: 3000;
-    bottom: -13em;
-    left: 0;
-    right: 0;
+    position: relative;
+    z-index: 4000;
     width: 100%;
     border-top-left-radius: 30% 20%;
     border-top-right-radius: 30% 20%;
