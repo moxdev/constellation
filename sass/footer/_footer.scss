@@ -2,7 +2,6 @@
  color: #fff;
  font-family: $font__reg;
  text-align: center;
-//  font-size: .1rem;
  border: 1px solid red;
 
  a {
@@ -15,7 +14,7 @@
  }
 
  .flex-wrapper {
-   @include respond-to(small) {
+   @include respond-to(medium) {
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -25,7 +24,7 @@
  .logo, .social, .copyright {
    margin-bottom: 1em;
 
-   @include respond-to(small) {
+   @include respond-to(medium) {
      margin-bottom: 0;
    }
  }
@@ -37,7 +36,7 @@
       height: 45px;
     }
 
-    @include respond-to(small) {
+    @include respond-to(medium) {
       flex: 1 1 20%;
       text-align-last: left;
     }
@@ -182,7 +181,7 @@
      }
    }
 
-   @include respond-to(small) {
+   @include respond-to(medium) {
      flex: 1 1 30%;
      text-align: center;
    }
@@ -191,7 +190,7 @@
  .copyright {
    font-size: 0.875rem;
 
-   @include respond-to(small) {
+   @include respond-to(medium) {
      flex: 1 1 30%;
      text-align: right;
    }
@@ -211,7 +210,7 @@
      margin-left: 1em;
    }
 
-   @include respond-to(small) {
+   @include respond-to(medium) {
      flex: 0 0 100%;
      text-align: right;
    }

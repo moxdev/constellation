@@ -60,9 +60,10 @@
 	a {
 		display: block;
     text-decoration: none;
-    // font-family: $font__bold;
-    // color: $color__brand-3;
-    text-transform: uppercase;
+    font-family: $font__medium;
+    color: $color__brand-1;
+		text-transform: uppercase;
+		letter-spacing: 1px;
 	}
 
 	.current_page_item > a,

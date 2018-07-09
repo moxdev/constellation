@@ -2,20 +2,34 @@
   background-color: $color__brand-3;
 
   .masthead-wrapper {
-    // padding: 0 10px 5px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 
     .site-branding {
 
-      img {
+      svg {
         width: 200px;
+        height: 42px;
+
+        @include respond-to(x-small) {
+          width: 250px;
+          height: 52px;
+        }
       }
     }
 
     #primary-menu {
       display: none;
+
+      @include respond-to(menu-break) {
+        display: block;
+      }
+    }
+
+    @include respond-to(x-small) {
+      @include padding-left-right;
     }
   }
 
@@ -119,7 +133,6 @@
       @include padding-left-right;
 
       #primary-menu {
-        display: block;
 
         li {
           padding: 1rem .5rem;
@@ -136,13 +149,6 @@
 
     .masthead-wrapper {
       align-items: center;
-
-      .site-branding {
-
-        img {
-          width: 230px;
-        }
-      }
 
       #primary-menu {
 
