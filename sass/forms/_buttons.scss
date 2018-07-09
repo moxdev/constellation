@@ -1,0 +1,63 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 3px;
+	background: $color__background-button;
+	color: rgba(0, 0, 0, .8);
+	@include font-size(0.75);
+	line-height: 1;
+	padding: .6em 1em .4em;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+}
+
+.btn {
+  display: inline-block;
+  // font-family: $font__bold;
+  // @include font-smooth;
+  letter-spacing: 1px;
+  min-width: 175px;
+  text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+  background: tranparent;
+  color: #fff;
+  margin-top: 1em;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  @include font-size(.9);
+  line-height: 1;
+  padding: .9rem;
+  -webkit-appearance: none;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+    // background: $color__brand-2;
+    // color: ;
+  }
+
+  &:hover,
+  &:visited,
+  &:active,
+  &:focus {
+    // color: $color__btn-color;
+  }
+
+  @include respond-to(small) {
+    @include font-size(1);
+  }
+  @include respond-to(large) {
+    @include font-size(.9);
+  }
+}

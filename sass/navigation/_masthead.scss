@@ -1,0 +1,155 @@
+#masthead {
+  background-color: $color__brand-3;
+
+  .masthead-wrapper {
+    // padding: 0 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .site-branding {
+
+      img {
+        width: 200px;
+      }
+    }
+
+    #primary-menu {
+      display: none;
+    }
+  }
+
+  #menu-toggle {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+  }
+
+  #nav-icon {
+    width: 30px;
+    margin: 0 auto;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: $color__brand-1;
+      opacity: 1;
+      // left: 15%;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+
+    span:nth-child(1) {
+      top: -36px;
+    }
+
+    span:nth-child(2),span:nth-child(3) {
+      top: -24px;
+    }
+
+    span:nth-child(3) {
+      // background: $color__brand-1;
+    }
+
+    span:nth-child(4) {
+      top: -12px;
+    }
+  }
+
+  #menu-toggle.open {
+    #nav-icon span:nth-child(1) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+
+    #nav-icon span:nth-child(2) {
+      transform: rotate(45deg);
+      background: $color__brand-1;
+    }
+
+    #nav-icon span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+
+    #nav-icon span:nth-child(4) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+  }
+
+  @media screen and (min-width: 400px) {
+
+    .masthead-wrapper {
+      // padding: 0 20px 10px;
+
+      #nav-icon {
+
+        span:nth-child(1) {
+          top: -36px;
+        }
+
+        span:nth-child(2),span:nth-child(3) {
+          top: -23px;
+        }
+
+        span:nth-child(4) {
+          top: -9px;
+        }
+      }
+
+    }
+  }
+
+  @include respond-to(medium) {
+    #menu-toggle {
+      display: none;
+    }
+
+    .masthead-wrapper {
+      @include padding-left-right;
+
+      #primary-menu {
+        display: block;
+
+        li {
+          padding: 1rem .5rem;
+        }
+
+        li:last-child {
+          padding-right: 0px;
+        }
+      }
+    }
+  }
+
+  @include respond-to(large) {
+
+    .masthead-wrapper {
+      align-items: center;
+
+      .site-branding {
+
+        img {
+          width: 230px;
+        }
+      }
+
+      #primary-menu {
+
+        li {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
