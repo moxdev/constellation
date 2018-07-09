@@ -19,7 +19,8 @@ const gulp = require('gulp'),
 // Spin up a server
 gulp.task('serve', () => {
 	browserSync.init({
-		proxy: projectURL
+		proxy: projectURL,
+		injectChanges: true
 	});
 });
 
@@ -50,6 +51,7 @@ gulp.task('imgs', () => {
 gulp.task('css', () => {
 	gulp
 		.src('./sass/**/*.scss')
+		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(
 			sass({

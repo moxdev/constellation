@@ -2,6 +2,7 @@
   .hero {
     color: #fff;
     position: relative;
+    z-index: 1000;
 
     video {
       width: 100%;
@@ -17,21 +18,46 @@
       top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
-      display: flex;
-      justify-content: space-around;
       text-align: center;
       border: 1px solid red;
       padding: 5em;
+
+      @include respond-to(medium) {
+        display: flex;
+        justify-content: space-around;
+      }
     }
 
     .hero-callout-left {
-      flex: 1;
       border: 1px solid green;
+
+      @include respond-to(medium) {
+        flex: 1;
+      };
     }
 
     .hero-callout-right {
-      flex: 1;
       border: 1px solid yellow;
+
+      @include respond-to(medium) {
+        flex: 1;
+      };
+    }
+  }
+
+  #content {
+    position: absolute;
+    z-index: 3000;
+    bottom: -13em;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-top-left-radius: 30% 20%;
+    border-top-right-radius: 30% 20%;
+    border-top: 10px solid $color__brand-1;
+
+    h1 {
+      color: $color__brand-1;
     }
   }
 }

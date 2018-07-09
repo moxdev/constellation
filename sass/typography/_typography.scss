@@ -72,6 +72,11 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
 @import "headings";
 
 @import "copy";
