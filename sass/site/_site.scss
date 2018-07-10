@@ -23,17 +23,35 @@
 
 #page {
   position: relative;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 #content {
+  position: relative;
+  z-index:99999;
   background-color: #ffffff;
+  width: 160%;
+  border-top-left-radius: 50% 20%;
+  border-top-right-radius: 50% 20%;
+  border-top: 10px solid $color__brand-1;
+  margin-top: -4em;
+  margin-left: -30%;
+
+  @include respond-to(small) {
+    width: 130%;
+    border-top-left-radius: 80%;
+    border-top-right-radius: 80%;
+    border-top: 10px solid $color__brand-1;
+    margin-left: -15%;
+  }
 }
 
 .wrapper {
   @include section-padding(2);
   @include padding-left-right;
   @include max-width(900px);
+  margin-left: 20%;
+  margin-right: 20%;
 
   @include respond-to(large) {
     @include max-width(1200px);

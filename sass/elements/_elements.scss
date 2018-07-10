@@ -31,4 +31,8 @@ figure {
 	display: block;
 }
 
+strong {
+	font-family: $font__reg-bold;
+}
+
 @import "tables";

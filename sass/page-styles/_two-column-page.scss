@@ -1,0 +1,28 @@
+.page-template-page-two-column {
+  section.two-columns {
+    padding-top: 2em;
+    .col-1 {
+      img {
+        width: 130px;
+      }
+    }
+
+    @include respond-to(small) {
+      .flex-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      .col-1 {
+        flex: 1 1 20%;
+        text-align: center;
+        padding-top: 1em;
+      }
+
+      .col-2 {
+        flex: 1 1 60%;
+      }
+
+    }
+  }
+}

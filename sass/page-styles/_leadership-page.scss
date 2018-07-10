@@ -1,0 +1,39 @@
+.page-template-page-leadership {
+  .headshot {
+
+    img {
+      width: 130px;
+      border: 5px solid #000;
+      border-radius: 50%;
+      position:relative;
+
+      &:after {
+        position:absolute;
+        content:"";
+        width:110%;
+        height:110%;
+        background:#000;
+        top:-5%;
+        left:-5%;
+        z-index:-1;
+        border-radius:50%;
+      }
+    }
+  }
+
+  @include respond-to(small) {
+    .flex-wrapper {
+      display: flex;
+    }
+
+    .headshot {
+      flex: 1 1 20%;
+      text-align: center;
+      padding-top: 1.2em;
+    }
+
+    .bio {
+      flex: 1 1 60%;
+    }
+  }
+}

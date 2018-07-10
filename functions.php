@@ -42,7 +42,8 @@ if ( ! function_exists( 'constellation_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size('feature-img', 1800, 400, true);
-		add_image_size('team-bio-img', 300, 300, true);
+		add_image_size('two-column-image', 300, 300, true);
+		add_image_size('leadership-image', 300, 300, true);
 		add_image_size('capabilities-icon', 255, 255, true);
 
 		// This theme uses wp_nav_menu() in one location.
@@ -172,7 +173,12 @@ function my_mce_before_init_insert_formats( $init_array ) {
         'title' => 'Button', // Title to show in dropdown
         'inline' => 'a', // Element to add class to
         'classes' => 'btn' // CSS class to add
-      )
+			),
+			array(
+					'title' => 'Column', // Title to show in dropdown
+					'block' => 'div', // Element to add class to
+					'classes' => 'wysiwig-column' // CSS class to add
+			)
     );
     $init_array['style_formats'] = json_encode( $style_formats );
     return $init_array;
@@ -230,5 +236,15 @@ require get_template_directory() . '/inc/custom-hero-img.php';
  * Capabilities Icon Section.
  */
 require get_template_directory() . '/inc/capabilities-icon-section.php';
+
+/**
+ * Two Column Section.
+ */
+require get_template_directory() . '/inc/two-column-section.php';
+
+/**
+ * Leadship Section.
+ */
+require get_template_directory() . '/inc/leadership-section.php';
 
 
