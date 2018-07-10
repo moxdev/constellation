@@ -39,6 +39,10 @@
     padding: 0;
     border: none;
     border-radius: 0;
+
+    @include respond-to(menu-break) {
+      display: none;
+    }
   }
 
   #nav-icon {
@@ -124,15 +128,12 @@
     }
   }
 
-  @include respond-to(medium) {
-    #menu-toggle {
-      display: none;
-    }
-
+  @include respond-to(menu-break) {
     .masthead-wrapper {
       @include padding-left-right;
 
       #primary-menu {
+        font-size: 0.9em;
 
         li {
           padding: 1rem .5rem;
