@@ -35,5 +35,55 @@ function constellation_custom_header_section() {
 
     <?php
 
-  }
+  } elseif ( is_home() || is_archive() || is_single() ) {
+
+		$news_feature_img = get_the_post_thumbnail( get_option( 'page_for_posts' ), 'feature-img' );
+
+		if ( $news_feature_img ) { ?>
+
+		<section class="feature-header">
+			<figure class="feature-img">
+
+				<?php echo $news_feature_img; ?>
+
+				<div class="title-wrapper">
+					<?php constellation_seo_blog_page_title(); ?>
+				</div><!-- title-wrapper -->
+			</figure>
+		</section>
+
+		<?php
+
+		}
+
+	} elseif ( is_page() && has_post_thumbnail() ) { ?>
+		<section class="feature-header">
+			<figure class="feature-img">
+
+				<?php the_post_thumbnail('feature-img'); ?>
+
+				<div class="title-wrapper">
+					<?php constellation_seo_page_titles(); ?>
+				</div><!-- title-wrapper -->
+			</figure>
+		</section>
+		<?php
+
+	} else {
+
+		$page_feature_img = get_the_post_thumbnail( get_option( 'page_for_posts' ), 'feature-img' ); ?>
+
+		<section class="feature-header">
+			<figure class="feature-img">
+
+				<?php echo $page_feature_img; ?>
+
+				<div class="title-wrapper">
+					<?php constellation_seo_page_titles(); ?>
+				</div><!-- title-wrapper -->
+			</figure>
+		</section>
+	<?php
+
+	}
 }

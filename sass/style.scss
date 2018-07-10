@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Feature Image
 # Page Styles
 	## Front Page
 # Footer
@@ -107,6 +108,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/*--------------------------------------------------------------
+# Feature Image
+--------------------------------------------------------------*/
+@import "feature-img/feature-img";
 
 /*--------------------------------------------------------------
 # Page Styles

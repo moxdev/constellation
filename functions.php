@@ -41,6 +41,8 @@ if ( ! function_exists( 'constellation_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size('feature-img', 1800, 400, true);
+		add_image_size('team-bio-img', 300, 300, true);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -58,12 +60,6 @@ if ( ! function_exists( 'constellation_setup' ) ) :
 			'gallery',
 			'caption',
 		) );
-
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'constellation_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
