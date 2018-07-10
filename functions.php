@@ -43,6 +43,7 @@ if ( ! function_exists( 'constellation_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 		add_image_size('feature-img', 1800, 400, true);
 		add_image_size('team-bio-img', 300, 300, true);
+		add_image_size('capabilities-icon', 255, 255, true);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -224,5 +225,10 @@ require get_template_directory() . '/inc/customizer.php';
  * Home Hero Section.
  */
 require get_template_directory() . '/inc/custom-hero-img.php';
+
+/**
+ * Capabilities Icon Section.
+ */
+require get_template_directory() . '/inc/capabilities-icon-section.php';
 
 

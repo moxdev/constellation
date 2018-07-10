@@ -44,6 +44,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Feature Image
 # Page Styles
 	## Front Page
+	## Capabilites Page
+	## Blog Page
 # Footer
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
@@ -121,6 +123,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 ## Front Page
 --------------------------------------------------------------*/
 @import "page-styles/front-page";
+
+/*--------------------------------------------------------------
+## Capabilites Page
+--------------------------------------------------------------*/
+@import "page-styles/capabilities-page";
 
 /*--------------------------------------------------------------
 ## Blog Page

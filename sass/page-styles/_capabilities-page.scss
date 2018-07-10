@@ -1,0 +1,20 @@
+.page-template-page-capabilities {
+  .capabilities-icons {
+    a {
+      text-decoration: none;
+    }
+    img {
+      width: 150px;
+    }
+
+    .icon-wrapper {
+      text-align: center;
+    }
+
+    @include respond-to(small) {
+      display: flex;
+      justify-content: center;
+
+    }
+  }
+}
