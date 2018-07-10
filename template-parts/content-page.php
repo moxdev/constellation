@@ -10,10 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php constellation_seo_page_titles(); ?>
-
-	<?php constellation_post_thumbnail(); ?>
-
 	<div class="entry-content">
 		<?php
 		the_content();

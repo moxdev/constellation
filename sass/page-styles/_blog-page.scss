@@ -1,0 +1,79 @@
+.blog, .single, .archive, .categories, .tag {
+
+  #secondary {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        border-bottom: 1px solid #e5e5e5;
+        padding: 5px 0;
+
+        a {
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+
+      }
+    }
+  }
+
+  .pagination {
+    .page-numbers {
+      display: inline-block;
+      padding: 5px 10px;
+      margin: 0 2px 0 0;
+      border: 1px solid #eee;
+      line-height: 1;
+      text-decoration: none;
+      border-radius: 2px;
+      font-family: $font__bold;
+      color: $color__brand-3;
+    }
+    .page-numbers.current,
+    a.page-numbers:hover {
+      background: #f9f9f9;
+      color: $color__brand-1;
+    }
+  }
+
+  .post-navigation {
+
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .nav-previous {
+        text-align: left;
+        padding-right: 1em;
+      }
+
+      .nav-next {
+        text-align: right;
+        padding-left : 1em;
+      }
+    }
+
+  }
+
+  @include respond-to(medium) {
+    #primary {
+      .wrapper {
+        display: flex;
+        justify-content: center;
+
+        #main {
+          flex: 1 1 50%;
+          order: 2;
+        }
+
+        #secondary {
+          flex: 1 1 40%;
+          order: 1;
+        }
+      }
+    }
+  }
+}
