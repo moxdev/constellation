@@ -47,6 +47,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Capabilites Page
 	## Who We Are Page
 	## Blog Page
+	## Contact Page
 # Footer
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
@@ -149,6 +150,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 ## Blog Page
 --------------------------------------------------------------*/
 @import "page-styles/blog-page";
+
+/*--------------------------------------------------------------
+## Contact Page
+--------------------------------------------------------------*/
+@import "page-styles/contact-page";
 
 /*--------------------------------------------------------------
 # Footer
