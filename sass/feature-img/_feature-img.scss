@@ -18,7 +18,7 @@
     position: absolute;
     width: 100%;
     z-index: 1000;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -30,12 +30,12 @@
   }
 
   @include respond-to(small) {
-    height: 350px;
+    height: 500px;
   }
 
   @include respond-to(large) {
     .title-wrapper {
-      top: 50%;
+      // top: 50%;
     }
   }
 }

@@ -45,6 +45,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Page Styles
 	## Front Page
 	## Capabilites Page
+	## Who We Are Page
 	## Blog Page
 # Footer
 --------------------------------------------------------------*/
@@ -138,6 +139,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 ## Leadership Page
 --------------------------------------------------------------*/
 @import "page-styles/leadership-page";
+
+/*--------------------------------------------------------------
+## Who We Are Page
+--------------------------------------------------------------*/
+@import "page-styles/who-we-are-page";
 
 /*--------------------------------------------------------------
 ## Blog Page

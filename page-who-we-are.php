@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Capabilities
+ * Template Name: Who We Are
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -28,7 +28,7 @@ get_header();
 				endwhile; // End of the loop.
 				?>
 
-				<?php if( function_exists( 'constellation_capabilities_icon_section' ) ) : constellation_capabilities_icon_section(); endif; ?>
+				<?php if( function_exists( 'constellation_who_we_are_section' ) ) : constellation_who_we_are_section(); endif; ?>
 
 			</div>
 		</main><!-- #main -->

@@ -41,7 +41,7 @@ if ( ! function_exists( 'constellation_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		add_image_size('feature-img', 1800, 400, true);
+		add_image_size('feature-img', 1800, 500, true);
 		add_image_size('two-column-image', 300, 300, true);
 		add_image_size('leadership-image', 300, 300, true);
 		add_image_size('capabilities-icon', 255, 255, true);
@@ -246,5 +246,10 @@ require get_template_directory() . '/inc/two-column-section.php';
  * Leadship Section.
  */
 require get_template_directory() . '/inc/leadership-section.php';
+
+/**
+ * Who We Are Section.
+ */
+require get_template_directory() . '/inc/who-we-are-section.php';
 
 

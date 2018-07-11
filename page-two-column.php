@@ -14,7 +14,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<div class='wrapper'>
+			<div class="wrapper">
 
 				<?php if( function_exists( 'constellation_two_column_section' ) ) : constellation_two_column_section(); endif; ?>
 
