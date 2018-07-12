@@ -14,7 +14,8 @@
 
 
     .site-branding {
-      // flex: 1;
+      @include test(red);
+
       svg {
         width: 200px;
         height: 42px;
@@ -40,11 +41,33 @@
       // flex: 3;
     }
 
+    .masthead-menu-container {
+      width: 100%;
+      height: 50%;
+      background-color: $color__brand-1;
+      color: #fff;
+      letter-spacing: 1.5px;
+      position: fixed;
+      top: 74px;
+      right: 0;
+      z-index: 999999;
+      transform: translate3d(100%, 0, 0);
+      transition: all 300ms ease 0ms;
+
+      li {
+        // float: none;
+        a {
+          color: #fff;
+          display: block;
+        }
+      }
+    }
+
     #primary-menu {
-      display: none;
+      // display: none;
 
       @include respond-to(menu-break) {
-        display: block;
+        // display: block;
       }
     }
 
@@ -54,74 +77,22 @@
   }
 
   #menu-toggle {
+    @include test(red);
     background: transparent;
-    margin: 0;
-    padding: 0;
-    border: none;
+    // border: none;
     border-radius: 0;
+    font-family: $font__reg-bold;
+    padding: .5em 0;
+    font-size: 1.4rem;
 
     @include respond-to(menu-break) {
       display: none;
     }
   }
 
-  #nav-icon {
-    width: 30px;
-    margin: 0 auto;
-    position: relative;
-    transform: rotate(0deg);
-    transition: .5s ease-in-out;
-    cursor: pointer;
-
-    span {
-      display: block;
-      position: absolute;
-      height: 3px;
-      width: 100%;
-      background: $color__brand-1;
-      opacity: 1;
-      // left: 15%;
-      transform: rotate(0deg);
-      transition: .25s ease-in-out;
-    }
-
-    span:nth-child(1) {
-      top: -36px;
-    }
-
-    span:nth-child(2),span:nth-child(3) {
-      top: -24px;
-    }
-
-    span:nth-child(3) {
-      // background: $color__brand-1;
-    }
-
-    span:nth-child(4) {
-      top: -12px;
-    }
-  }
-
-  #menu-toggle.open {
-    #nav-icon span:nth-child(1) {
-      top: 18px;
-      width: 0%;
-      left: 50%;
-    }
-
-    #nav-icon span:nth-child(2) {
-      transform: rotate(45deg);
-      background: $color__brand-1;
-    }
-
-    #nav-icon span:nth-child(3) {
-      transform: rotate(-45deg);
-    }
-
-    #nav-icon span:nth-child(4) {
-      top: 18px;
-      width: 0%;
-      left: 50%;
+  .main-navigation.open {
+    .masthead-menu-container {
+      transform: translate3d(0, 0, 0);
     }
   }
 

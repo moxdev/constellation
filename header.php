@@ -50,11 +50,9 @@
 
 				<nav id="site-navigation" class="main-navigation">
 						<button id="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-								<div id="nav-icon">
-										<span>&bull;</span>
-										<span>&bull;</span>
-										<span>&bull;</span>
-								</div>
+							<span>&bull;</span>
+							<span>&bull;</span>
+							<span>&bull;</span>
 						</button>
 
 						<?php
