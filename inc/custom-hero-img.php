@@ -16,16 +16,16 @@ function constellation_custom_header_section() {
         $hero_content_left  = get_field( 'home_hero_content_left' );
 				$hero_content_right = get_field( 'home_hero_content_right' ); ?>
 
-				<video src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/constellation/media/low-6729115-preview.mp4" loop autoplay muted playsinline></video>
+				<video src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/constellation/media/low-6729115-preview.mp4" loop autoplay muted playsinline poster="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/07/video-poster.png"></video>
 
 				<div class='hero-wrapper'>
 					<div class="hero-callout-left">
-							<span class="hero-title"><?php echo wp_kses_post( $hero_title_left ); ?></span>
+							<h2 class="hero-title"><?php echo wp_kses_post( $hero_title_left ); ?></h2>
 							<div class="hero-content"><?php echo wp_kses_post( $hero_content_left ); ?></div>
 					</div>
 
 					<div class="hero-callout-right">
-							<span class="hero-title"><?php echo wp_kses_post( $hero_title_right ); ?></span>
+							<h2 class="hero-title"><?php echo wp_kses_post( $hero_title_right ); ?></h2>
 							<div class="hero-content"><?php echo wp_kses_post( $hero_content_right ); ?></div>
 					</div>
 				</div>

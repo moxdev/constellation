@@ -18,6 +18,36 @@
       opacity: .6;
     }
 
+    h2.hero-title {
+      color: #fff;
+      position: relative;
+      display: inline-block;
+      padding-right: 1.475em;
+      font-size: 1.5rem;
+
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-image: url(/wp-content/themes/constellation/imgs/red-swoosh.png);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: right top;
+        top: -25px;
+        right: 0;
+        bottom: -15px;
+        left: 0;
+      }
+    }
+
+    a {
+      color: #fff;
+
+      &:visited {
+        color: #fff;
+      }
+    }
+
     video {
       display: block;
       object-fit: cover;
@@ -37,25 +67,47 @@
       position: absolute;
       z-index: 3000;
       width: 100%;
-      top: 50%;
+      top: 52%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      padding: 5em;
+      @include padding-left-right;
 
       @include respond-to(medium) {
         display: flex;
+        display: none;
         justify-content: space-around;
+        padding: 5em;
       }
     }
 
     .hero-title {
       font-family: $font__black;
       text-transform: uppercase;
+      position: relative;
+    }
+
+    .hero-callout-left,
+    .hero-callout-right {
+      max-width: 500px;
+      margin: 0 auto;
     }
 
     .hero-callout-left {
-      border: 1px solid green;
+      // @include test(yellow);
+      position: relative;
+      padding-bottom: 3rem;
+
+      &:after {
+        content: '';
+        width: 50%;
+        border-bottom: solid 1px #fff;
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
       @include respond-to(medium) {
         flex: 1;
@@ -63,8 +115,8 @@
     }
 
     .hero-callout-right {
-      border: 1px solid yellow;
-
+      // @include test(pink);
+      padding-top: 4.5rem;
       @include respond-to(medium) {
         flex: 1;
       };
