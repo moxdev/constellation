@@ -10,10 +10,11 @@
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+
 
     .site-branding {
-
+      // flex: 1;
       svg {
         width: 200px;
         height: 42px;
@@ -22,7 +23,21 @@
           width: 250px;
           height: 52px;
         }
+
+        @include respond-to(small) {
+          width: 300px;
+          height: 62px;
+        }
+
+        @include respond-to(x-large) {
+          width: 350px;
+          height: 73px;
+        }
       }
+    }
+
+    .main-navigation {
+      // flex: 3;
     }
 
     #primary-menu {
@@ -151,13 +166,26 @@
     }
   }
 
-  @include respond-to(large) {
-
+  @media only screen and (min-width: 1300px) {
     .masthead-wrapper {
-      align-items: center;
+      // align-items: center;
 
       #primary-menu {
+        // font-size: 1em;
+        li {
+          padding: 1rem;
+        }
+      }
+    }
+  }
 
+  @include respond-to(x-large) {
+
+    .masthead-wrapper {
+      // align-items: center;
+
+      #primary-menu {
+        font-size: 1em;
         li {
           padding: 1rem;
         }
