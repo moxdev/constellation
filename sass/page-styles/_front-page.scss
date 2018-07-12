@@ -2,8 +2,7 @@
   .hero {
     color: #fff;
     position: relative;
-    z-index: 1000;
-    // margin-bottom: -4em;
+    z-index: -1;
 
     &:after {
       content: '';
@@ -55,11 +54,11 @@
       z-index: -1;
       width: auto;
       height: 1000px;
-      min-width: 100%;
-      min-height: 100%;
+      // min-width: 100%;
+      // min-height: 100%;
 
-      @include respond-to(small) {
-        height: auto;
+      @include respond-to(large) {
+        // height: auto;
       }
     }
 
@@ -73,11 +72,15 @@
       text-align: center;
       @include padding-left-right;
 
-      @include respond-to(medium) {
+      @include respond-to(large) {
         display: flex;
-        display: none;
-        justify-content: space-around;
-        padding: 5em;
+        // justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      @include respond-to(x-large) {
+        max-width: 1400px;
       }
     }
 
@@ -91,10 +94,20 @@
     .hero-callout-right {
       max-width: 500px;
       margin: 0 auto;
+
+      @include respond-to(x-small) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      @include respond-to(large) {
+        flex: 1;
+        // font-size: .9rem;
+      }
     }
 
     .hero-callout-left {
-      // @include test(yellow);
+      @include test(red);
       position: relative;
       padding-bottom: 3rem;
 
@@ -107,19 +120,36 @@
         bottom: 0;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @include respond-to(large) {
+          border-bottom: none !important;
+          transform: none !important;
+          border-right: 1px solid #fff;
+          top: 12%;
+          right: 0;
+          bottom: 0;
+          height: 75%;
+          margin-left: 4%;
+        }
+
+        @include respond-to(x-large) {
+          margin-left: 14%;
+        }
       }
 
-      @include respond-to(medium) {
-        flex: 1;
-      };
+      @include respond-to(large) {
+        padding-bottom: 0;
+
+      }
     }
 
     .hero-callout-right {
-      // @include test(pink);
+      @include test(yellow);
       padding-top: 4.5rem;
-      @include respond-to(medium) {
-        flex: 1;
-      };
+
+      @include respond-to(large) {
+        padding-top: 0;
+      }
     }
   }
 
