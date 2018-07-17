@@ -26,65 +26,80 @@
   overflow-x: hidden;
 }
 
-// .curve-border {
-//   margin-top: -4em;
-//   position: relative;
-//   z-index: 40000;
-
-//   svg {
-//     width: 100%;
-//     display: block;;
-//   }
-// }
-
 #content {
   background-color: #ffffff;
   position: relative;
   z-index: 40000;
+  margin-top: -2em;
 
-  // &:before {
-  //   width: 100%;
-  //   position: absolute;
-  //   display: block;
-  //   top: -18px;
-  //   left: 0;
-  //   // right: 0;
-  //   overflow: hidden;
-  //   background-image: url(/wp-content/themes/constellation/imgs/ai-curve.svg);
-  //   background-size: 100%;
-  //   background-repeat: no-repeat;
-  //   height: 100px;
-  //   // width: 120%;
-  //   // margin-left: -10%;
-  //   padding: 0; /* reset */
-  //   // padding-bottom: 10px
+  &:before {
+    display: block;
+    position: absolute;
+    top: -1em;
+    width: 100%;
+    height: 100px;
+    background-image: url(/wp-content/themes/constellation/imgs/oval-2400px.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 
-  //   @media only screen and (min-width: 600px) {
-  //     top: -35px;
+    @media only screen and (min-width: 375px) {
+      top: -2em;
+    }
 
-  //   };
-  //   @include respond-to(large) {
-  //     top: -73px;
-  //   }
+    @include respond-to(small) {
+      top: -3em;
+    }
 
-  //   // @include respond-to(x-large) {
-  //   //   background-size: cover;
-  //   //   width: 130%;
-  //   //   margin-left: 0;
-  //   //   top: -100px;
+    @include respond-to(large) {
+      top: -4em;
+    }
 
-  //   // }
-  // }
+    @include respond-to(xx-large) {
+      top: -5em;
+    }
+
+    @include respond-to(xxx-large) {
+      width: 120%;
+      margin-left: -10%;
+    }
+
+    @include respond-to(xxxx-large) {
+      width: 150%;
+      margin-left: -25%;
+    }
+  }
+
+  @media only screen and (min-width: 375px) {
+    margin-top: -1em;
+  };
+
+  @include respond-to(x-small) {
+
+
+  }
+
+  @include respond-to(small) {
+    margin-top: -2.5em;
+  }
+
+  @include respond-to(x-large) {
+    // margin-top: -4em;
+  }
 
 
 }
 
+#primary {
+  position: relative;
+  z-index: 50000;
+}
+
 .wrapper {
-  @include section-padding(2);
+  @include section-padding(1);
   @include padding-left-right;
   @include max-width(900px);
 
   @include respond-to(large) {
-    @include max-width(1200px);
+    // @include max-width(1200px);
   }
 }
