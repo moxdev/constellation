@@ -1,5 +1,9 @@
 .main-navigation {
-  // padding-top: 1rem;
+	// padding-top: 1rem;
+
+	#primary-menu .icon-plus {
+		display: none;
+	}
 
 	ul {
 		list-style: none;

@@ -149,10 +149,10 @@ if( function_exists('acf_add_options_page') ) {
  */
 add_filter( 'walker_nav_menu_start_el', 'wpse_add_menu_icon', 10, 4);
 function wpse_add_menu_icon( $item_output, $item, $depth, $args ){
-  if( 'mobile-menu' == $args->theme_location && $depth == 0 && in_array('menu-item-has-children', $item->classes ) ) {
-    $item_output .='<span class="icon-plus">&#43;</span>';
-  }
-  return $item_output;
+    if( 'main-menu' == $args->theme_location && $depth == 0 && in_array('menu-item-has-children', $item->classes ) ) {
+        $item_output .='<span class="icon-plus">&#43;</span>';
+    }
+    return $item_output;
 }
 
 /**

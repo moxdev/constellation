@@ -35,16 +35,10 @@ icons.map(item => {
 		item.classList.toggle('active');
 		if (item.nextElementSibling.classList.contains('active')) {
 			item.nextElementSibling.style.maxHeight = 0;
-			setTimeout(
-				function () {
-					item.nextElementSibling.classList.remove('active');
-				},
-				750
-			);
+			item.nextElementSibling.classList.remove('active');
 		} else {
 			item.nextElementSibling.classList.add('active');
-			item.nextElementSibling.style.maxHeight = item.nextElementSibling.scrollHeight +
-				'px';
+			item.nextElementSibling.style.maxHeight = item.nextElementSibling.scrollHeight + 'px';
 		}
 	});
 });

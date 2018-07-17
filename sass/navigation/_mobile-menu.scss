@@ -1,98 +1,93 @@
 #mobile-navigation {
-  display: none; // REMOVE !!!!!!!!
+  // display: none; // REMOVE !!!!!!!!
   padding: 0;
   margin: 0;
+  background-color: $color__brand-1;
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  height: auto;
+  z-index: 100;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  transform: translateX(100%);
+  transition: transform 0.25s ease-out;
+  letter-spacing: 1px;
+  z-index: 99999;
 
-  #mobile-menu {
-    padding: 0;
+  @media only screen and (min-width: 333px) {
+    top: 100px;
+  }
+
+  @media only screen and (min-width: 400px) {
+    top: 105px;
+  }
+
+  ul {
+    clear: both;
+    text-align: center;
+    list-style: none;
+    width: 100%;
+  }
+
+  li {
+    padding: 1em 2em;
     margin: 0;
-    background-color: $color__brand-2;
-    border-top: 2px solid $color__brand-2;
-    position: absolute;
-    top: 121px;
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    transform: translateX(100%);
-    transition: transform 0.25s ease-out;
-    letter-spacing: 1px;
-    z-index: 99999;
+    // background-color: #fff;
 
-    @media only screen and (min-width: 333px) {
-      top: 100px;
+    &:first-child {
+      padding-top: 2em;
     }
 
-    @media only screen and (min-width: 400px) {
-      top: 105px;
+    &:last-child {
+      padding-bottom: 2em;
     }
+  }
 
-    ul {
-      clear: both;
-      list-style: none;
-      overflow: hidden;
-      width: 100%;
-      transition: .25s;
-      max-height: 0px;
+  a {
+    color: #fff;
+    font-family: $font__bold;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 
-      &.active {
-        display: block;
-      }
+  .icon-plus {
+    color: #fff;
+    font-size: 1.4em;
+    float: right;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: .9;
+  }
+
+  .sub-menu {
+    max-height: 0px;
+    margin: 0;
+    padding: 0 2em 0;
+    opacity: 0;
+    transition: .25s;
+
+    &.active {
+      opacity: 1;
     }
 
     li {
-      padding: 1em 2em;
-      margin: 0;
-      background-color: #fff;
+      padding: 1em;
 
       &:first-child {
         padding-top: 2em;
       }
-
-      &:last-child {
-        padding-bottom: 2em;
-      }
     }
-
     a {
-      color: #111;
-      // font-family: $font__bold;
-      text-transform: uppercase;
-      text-decoration: none;
+      text-transform: none;
     }
 
-    .icon-plus {
-      color: $color__brand-2;
-      font-size: 1.4em;
-      float: right;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      line-height: .9;
-    }
-
-    .sub-menu {
-      margin: 0;
-      padding: 0 2em 0;
-      li {
-        padding: 1em;
-
-        &:first-child {
-          padding-top: 2em;
-        }
-      }
-      a {
-        text-transform: none;
-      }
-
-    }
-
-    &.open {
-      transform: translateX(0%);
-    }
   }
+
+  &.open {
+    transform: translateX(0%);
+  }
+
   @media only screen and (min-width: 1200px) {
     display: none
   }
-  // @include respond-to(large) {
-  // }
 }
