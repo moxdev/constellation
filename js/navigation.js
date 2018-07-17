@@ -3,7 +3,7 @@
  *
  */
 const btn = document.getElementById('menu-toggle');
-const pane = document.getElementById('site-navigation');
+const pane = document.getElementById('mobile-navigation');
 const activeClass = 'open';
 
 btn.addEventListener('click', function () {

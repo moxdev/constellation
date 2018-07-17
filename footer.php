@@ -101,14 +101,14 @@
 
 	<nav id="mobile-navigation">
 
-			<?php
-					wp_nav_menu( array(
-							'theme_location' => 'main-menu',
-							'menu_id'        => 'mobile-menu',
-							'container'        => 'div',
-							'container_class'        => 'mobile-menu-container'
-					) );
-			?>
+		<?php
+			wp_nav_menu( array(
+				'theme_location'  => 'main-menu',
+				'menu_id'         => 'mobile-menu',
+				'container'       => 'div',
+				'container_class' => 'mobile-menu-container'
+			));
+		?>
 
 	</nav>
 </div><!-- #page -->

@@ -56,12 +56,12 @@
 						</button>
 
 						<?php
-								wp_nav_menu( array(
-										'theme_location'  => 'main-menu',
-										'menu_id'         => 'primary-menu',
-										'container'       => 'div',
-										'container_class' => 'masthead-menu-container'
-								) );
+							wp_nav_menu( array(
+								'theme_location'  => 'main-menu',
+								'menu_id'         => 'primary-menu',
+								'container'       => 'div',
+								'container_class' => 'masthead-menu-container'
+							) );
 						?>
 				</nav><!-- #site-navigation -->
 
