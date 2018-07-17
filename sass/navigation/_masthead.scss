@@ -1,8 +1,8 @@
 #masthead {
   position: absolute;
   top: 0;
-  right: 0;
   left: 0;
+  width: 100%;
   z-index: 99999;
   background-color: rgba(255,255,255,0.85);
 
@@ -12,9 +12,7 @@
     justify-content: space-between;
     align-items: center;
 
-
     .site-branding {
-      @include test(red);
 
       svg {
         width: 200px;
@@ -39,16 +37,8 @@
 
     .main-navigation {
 
-      .masthead-menu-container {
+      #primary-menu {
         display: none;
-      }
-    }
-
-    #primary-menu {
-      // display: none;
-
-      @include respond-to(menu-break) {
-        // display: block;
       }
     }
 
@@ -58,10 +48,8 @@
   }
 
   #menu-toggle {
-    @include test(red);
     background: transparent;
-    // border: none;
-    border-radius: 0;
+    border: none;
     font-family: $font__reg-bold;
     padding: .5em 0;
     font-size: 1.4rem;
@@ -71,38 +59,23 @@
     }
   }
 
-  .main-navigation.open {
-    // .masthead-menu-container {
-    //   transform: translate3d(0, 0, 0);
-    // }
-  }
-
-  @media screen and (min-width: 400px) {
-
-    .masthead-wrapper {
-    }
-  }
-
   @include respond-to(menu-break) {
     .masthead-wrapper {
       @include padding-left-right;
 
       .main-navigation {
 
-        .masthead-menu-container {
+        #primary-menu {
           display: block;
-        }
-      }
+          font-size: 0.9em;
 
-      #primary-menu {
-        font-size: 0.9em;
+          li {
+            padding: 1rem .5rem;
+          }
 
-        li {
-          padding: 1rem .5rem;
-        }
-
-        li:last-child {
-          padding-right: 0px;
+          li:last-child {
+            padding-right: 0px;
+          }
         }
       }
     }
@@ -110,10 +83,9 @@
 
   @media only screen and (min-width: 1300px) {
     .masthead-wrapper {
-      // align-items: center;
 
       #primary-menu {
-        // font-size: 1em;
+
         li {
           padding: 1rem;
         }
@@ -124,13 +96,9 @@
   @include respond-to(x-large) {
 
     .masthead-wrapper {
-      // align-items: center;
 
       #primary-menu {
         font-size: 1em;
-        li {
-          padding: 1rem;
-        }
       }
     }
   }
