@@ -39,10 +39,25 @@
 
       #primary-menu {
         display: none;
+
+        @include respond-to(menu-break) {
+          display: block;
+          font-size: 0.9em;
+        }
+
+        @include respond-to(x-large) {
+          font-size: 1em;
+        }
       }
     }
 
     @include respond-to(x-small) {
+      @include padding-left-right;
+    }
+
+    @include respond-to(menu-break) {
+      padding-top: 0;
+      padding-bottom: 0;
       @include padding-left-right;
     }
   }
@@ -56,50 +71,6 @@
 
     @include respond-to(menu-break) {
       display: none;
-    }
-  }
-
-  @include respond-to(menu-break) {
-    .masthead-wrapper {
-      @include padding-left-right;
-
-      .main-navigation {
-
-        #primary-menu {
-          display: block;
-          font-size: 0.9em;
-
-          li {
-            padding: 1rem .5rem;
-          }
-
-          li:last-child {
-            padding-right: 0px;
-          }
-        }
-      }
-    }
-  }
-
-  @media only screen and (min-width: 1300px) {
-    .masthead-wrapper {
-
-      #primary-menu {
-
-        li {
-          padding: 1rem;
-        }
-      }
-    }
-  }
-
-  @include respond-to(x-large) {
-
-    .masthead-wrapper {
-
-      #primary-menu {
-        font-size: 1em;
-      }
     }
   }
 }

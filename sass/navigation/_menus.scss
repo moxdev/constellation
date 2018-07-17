@@ -1,23 +1,24 @@
 .main-navigation {
 	// padding-top: 1rem;
 
-	#primary-menu .icon-plus {
-		display: none;
-	}
-
 	ul {
 		list-style: none;
 		margin: 0;
     padding-left: 0;
-    background: #fff;
+		background-color: rgba(255,255,255,0.85);
+
+		.icon-plus {
+			display: none;
+		}
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
 			position: absolute;
-			top: 100%;
+			top: 95%;
 			left: -999em;
 			z-index: 99999;
+			padding: 1em 0;
+			background-color: #fff;
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 
 			ul {
 				left: -999em;
@@ -25,6 +26,7 @@
 			}
 
 			li {
+
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
@@ -32,7 +34,11 @@
 			}
 
 			a {
-				width: 200px;
+				width: 400px;
+				text-align: left;
+				line-height: 1.2;
+				padding: 1em;
+				font-size: 0.9em;
 			}
 
 			:hover > a,
@@ -41,6 +47,7 @@
 
 			a:hover,
 			a.focus {
+				color: $color__brand-4;
       }
 		}
 
@@ -53,11 +60,20 @@
 	li {
     float: left;
     position: relative;
-    padding: 1rem;
+		margin-left: .5em;
+
+		@include respond-to(large) {
+			margin-left: 0.75em;
+		}
+
+		@include respond-to(x-large) {
+			margin-left: 1em;
+
+		}
 
 		&:hover > a,
 		&.focus > a {
-      color: $color__brand-1;
+      color: $color__brand-4;
 		}
 	}
 
@@ -65,16 +81,22 @@
 		display: block;
     text-decoration: none;
     font-family: $font__medium;
-    color: $color__brand-1;
+    color: #111;
 		text-transform: uppercase;
 		letter-spacing: .5px;
+		padding: 2rem .5rem;
+
+		&:last-child {
+		  padding-right: 0px;
+		}
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-    color: $color__brand-4;
+		color: $color__brand-4;
+		font-family: $font__bold;
 	}
 }
 

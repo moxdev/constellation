@@ -42,38 +42,39 @@
   position: relative;
   z-index: 40000;
 
-  &:before {
-    width: 100%;
-    position: absolute;
-    display: block;
-    top: -18px;
-    left: 0;
-    right: 0;
-    background-image: url(/wp-content/themes/constellation/imgs/ai-curve.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 100px;
-    width: 120%;
-    margin-left: -10%;
-    padding: 0; /* reset */
-    // padding-bottom: 10px
+  // &:before {
+  //   width: 100%;
+  //   position: absolute;
+  //   display: block;
+  //   top: -18px;
+  //   left: 0;
+  //   // right: 0;
+  //   overflow: hidden;
+  //   background-image: url(/wp-content/themes/constellation/imgs/ai-curve.svg);
+  //   background-size: 100%;
+  //   background-repeat: no-repeat;
+  //   height: 100px;
+  //   // width: 120%;
+  //   // margin-left: -10%;
+  //   padding: 0; /* reset */
+  //   // padding-bottom: 10px
 
-    @media only screen and (min-width: 600px) {
-      top: -35px;
+  //   @media only screen and (min-width: 600px) {
+  //     top: -35px;
 
-    };
-    @include respond-to(large) {
-      top: -73px;
-    }
+  //   };
+  //   @include respond-to(large) {
+  //     top: -73px;
+  //   }
 
-    // @include respond-to(x-large) {
-    //   background-size: cover;
-    //   width: 130%;
-    //   margin-left: 0;
-    //   top: -100px;
+  //   // @include respond-to(x-large) {
+  //   //   background-size: cover;
+  //   //   width: 130%;
+  //   //   margin-left: 0;
+  //   //   top: -100px;
 
-    // }
-  }
+  //   // }
+  // }
 
 
 }
