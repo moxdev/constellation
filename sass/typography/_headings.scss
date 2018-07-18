@@ -28,7 +28,7 @@ h2 {
   line-height: 1.125em;
   margin: .5em 0;
   color: $color__brand-1;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 
   @include respond-to(large) {
     font-size: 1.65rem;

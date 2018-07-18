@@ -39,7 +39,7 @@
     width: 100%;
     height: 100px;
     background-image: url(/wp-content/themes/constellation/imgs/oval-2400px.svg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 
     @media only screen and (min-width: 375px) {
@@ -100,6 +100,6 @@
   @include max-width(900px);
 
   @include respond-to(large) {
-    // @include max-width(1200px);
+    @include max-width(1000px);
   }
 }
