@@ -1,5 +1,72 @@
 .blog, .single, .archive, .categories, .tag {
 
+  .feature-header {
+    h1.entry-title {
+      color: #fff;
+      position: relative;
+      display: inline-block;
+      padding-right: 1.475em;
+
+      &:after {
+        display: block !important;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-image: url(/wp-content/themes/constellation/imgs/red-swoosh.png);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: right top;
+        top: -25px;
+        right: 0;
+        bottom: -15px;
+        left: 0;
+      }
+    }
+  }
+
+  article {
+    margin-bottom: 2em;
+  }
+
+  h1 {
+    color: $color__brand-1;
+    text-align: left;
+    display: block;
+    padding-right: 0;
+    margin-top: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+
+    a {
+      // text-decoration: none;
+
+      &:hover {
+        color: $color__brand-4;
+      }
+
+      &:visited {
+        color: $color__brand-1;
+      }
+    }
+  }
+  .entry-meta {
+    margin-bottom: 1em;
+  }
+
+  .entry-footer {
+    margin-top: 1em;
+
+    span {
+      margin-right: 1em;
+    }
+  }
+
   #secondary {
     ul {
       list-style-type: none;
@@ -28,13 +95,13 @@
       line-height: 1;
       text-decoration: none;
       border-radius: 2px;
-      font-family: $font__bold;
-      color: $color__brand-3;
+      font-family: $font__reg-bold;
+      color: $color__brand-1;
     }
     .page-numbers.current,
     a.page-numbers:hover {
       background: #f9f9f9;
-      color: $color__brand-1;
+      color: $color__brand-4;
     }
   }
 
@@ -65,15 +132,17 @@
         justify-content: center;
 
         #main {
-          flex: 1 1 50%;
+          width: 65%;
+          margin-left: 10%;
           order: 2;
         }
 
         #secondary {
-          flex: 1 1 40%;
+          width: 25%;
           order: 1;
         }
       }
     }
   }
 }
+

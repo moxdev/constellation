@@ -11,8 +11,8 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-			<div class='wrapper'>
+		<div class='wrapper'>
+			<main id="main" class="site-main">
 				<?php if ( have_posts() ) : ?>
 
 					<header class="page-header">
@@ -44,10 +44,14 @@ get_header();
 
 				endif;
 				?>
-			</div><!-- wrapper -->
-		</main><!-- #main -->
+
+			</main><!-- #main -->
+
+		<?php get_sidebar(); ?>
+
+		</div><!-- wrapper -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();
