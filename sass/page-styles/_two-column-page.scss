@@ -1,6 +1,6 @@
 .page-template-page-two-column {
   section.two-columns {
-    padding-top: 2em;
+
     .col-1 {
       img {
         width: 130px;
@@ -10,17 +10,34 @@
     @include respond-to(small) {
       .flex-wrapper {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
       }
 
       .col-1 {
         flex: 1 1 20%;
         text-align: center;
-        padding-top: 1em;
+        // padding-top: 1em;
+
+        h2 {
+          padding-left: 1em;
+          padding-right: 1em;
+        }
       }
 
       .col-2 {
+        width: 60%;
         flex: 1 1 60%;
+        padding-left: 2em;
+      }
+
+    }
+
+    @include respond-to(large) {
+      .col-1 {
+
+        h2 {
+          font-size: 1.45rem;
+        }
       }
 
     }

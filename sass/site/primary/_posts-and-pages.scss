@@ -3,7 +3,12 @@
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 2em 0 1.5em;
+
+	@include respond-to(small) {
+		// margin-top: 1em;
+
+	}
 }
 
 .updated:not(.published) {

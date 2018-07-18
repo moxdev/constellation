@@ -1,5 +1,7 @@
 .page-template-page-capabilities {
   .capabilities-icons {
+    @include max-width(700px);
+
     a {
       text-decoration: none;
     }
@@ -9,12 +11,24 @@
 
     .icon-wrapper {
       text-align: center;
+      margin-bottom: 1em;
+
+      h2 {
+        margin: 1em 0;
+      }
     }
 
     @include respond-to(small) {
       display: flex;
       justify-content: center;
+    }
 
+    @include respond-to(large) {
+      @include max-width(800px);
+
+      h2 {
+        font-size: 1.25rem;
+      }
     }
   }
 }
