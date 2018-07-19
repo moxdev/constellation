@@ -1,7 +1,6 @@
 .home {
 
   .hero {
-    @include test(red);
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -27,7 +26,6 @@
     }
 
     video {
-      @include test(green);
       display: block;
       object-fit: cover;
       position: relative;
@@ -75,8 +73,6 @@
     }
 
     .hero-wrapper {
-      @include test(red);
-
       position: absolute;
       z-index: 3000;
       width: 100%;
@@ -173,14 +169,12 @@
   }
 
   #content {
-    @include test(orange);
     background-color: #ffffff;
     position: relative;
     z-index: 9999999;
     // margin-top: -2em;
 
     &:before {
-      border: 3px solid green;
       // display: block;
       position: absolute;
       z-index: 9999999;
