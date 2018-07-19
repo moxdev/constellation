@@ -30,21 +30,24 @@
     @include respond-to(small) {
       top: 50%;
     }
-    @include respond-to(large) {
-      top: 48%;
+    @include respond-to(menu-break) {
+      top: 52%;
     }
   }
 
   @include respond-to(x-small) {
-    height: 275px;
-
+    height: 300px;
   }
 
   @include respond-to(small) {
-    height: 325px;
+    height: 350px;
   }
 
   @include respond-to(large) {
     height: 400px;
+  }
+
+  @include respond-to(x-large) {
+    height: 450px;
   }
 }

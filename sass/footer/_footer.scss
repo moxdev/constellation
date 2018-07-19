@@ -20,7 +20,7 @@
    }
  }
 
- .logo, .social, .copyright {
+ .footer-logo, .social, .copyright {
    margin-bottom: 1em;
 
    @include respond-to(medium) {
@@ -28,7 +28,7 @@
    }
  }
 
- .logo {
+ .footer-logo {
 
     svg {
       width: 200px;

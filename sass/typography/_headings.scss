@@ -20,6 +20,10 @@ h1 {
   @include respond-to(large) {
     font-size: 1.875rem;
   }
+
+  @include respond-to(x-large) {
+    font-size: 2rem;
+  }
 }
 
 h2 {
@@ -34,6 +38,9 @@ h2 {
     font-size: 1.65rem;
   }
 
+  @include respond-to(x-large) {
+    font-size: 1.875rem;
+  }
 }
 
 h3 {

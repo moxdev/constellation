@@ -2,14 +2,16 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  min-width: 175px;
+	color: #fff;
+	background: $color__background-button;
+  padding: 1rem 1rem .7rem;
 	border: 1px solid;
 	border-color: $color__border-button;
 	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
-	@include font-size(0.75);
+	border-radius: 10px;
+  @include font-size(.9);
 	line-height: 1;
-	padding: .6em 1em .4em;
 
 	&:hover {
 		border-color: $color__border-button-hover;

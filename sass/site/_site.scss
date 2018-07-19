@@ -114,7 +114,8 @@
 }
 
 .wrapper {
-  @include section-padding(1);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   @include padding-left-right;
   @include max-width(900px);
 
@@ -131,4 +132,14 @@
   @include respond-to(x-large) {
     @include max-width(1100px);
   }
+}
+
+// Center the Rbox Career list
+.rbox-widget {
+  text-align: center;
+}
+
+// Left align the Rbox fullpage job
+.rbox-job-fullpage {
+  text-align: left;
 }

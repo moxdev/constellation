@@ -78,6 +78,10 @@
         bottom: -15px;
         left: 0;
       }
+
+      @include respond-to(x-large) {
+        font-size: 2rem;
+      }
     }
 
     .hero-wrapper {
