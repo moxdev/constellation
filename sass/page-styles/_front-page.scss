@@ -10,9 +10,9 @@
       position: absolute;
       z-index: -1;
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
       background-color: $color__background-overlay;
       opacity: .6;
     }
@@ -28,24 +28,32 @@
     video {
       display: block;
       object-fit: cover;
+      font-family: "object-fit: cover";
       position: relative;
-      z-index: -99999;
+      z-index: -1;
       width: 100%;
-      height: 1000px;
-      // min-width: 100%;
-      // min-height: 100%;
-      // border: 10px solid yellow;
+      height: 950px;
+      min-width: 100%;
+      min-height: 100%;
 
-      @include respond-to(small) {
-        height: 1100px;
+      @include respond-to(x-small) {
+        height: 900px;
       }
 
-      @include respond-to(large) {
+      @include respond-to(small) {
+        height: 1075px;
+      }
+
+      @include respond-to(menu-break) {
         height: 800px;
       }
 
-      @include respond-to(xx-large) {
+      @include respond-to(large) {
         height: 900px;
+      }
+
+      @include respond-to(x-large) {
+        height: 1000px;
       }
     }
 
@@ -55,7 +63,7 @@
       display: inline-block;
       padding-right: 1.475em;
       font-size: 1.5rem;
-      margin-bottom: 1.5em;
+      margin-bottom: 1.2rem;
 
       &:after {
         content: "";
@@ -86,16 +94,24 @@
         top: 50%;
       }
 
-      @include respond-to(large) {
+      @include respond-to(menu-break) {
         top: 51%;
         display: flex;
-        // justify-content: space-between;
         max-width: 1200px;
         margin: 0 auto;
       }
 
+      @include respond-to(large) {
+        top: 49%;
+
+      };
+
       @include respond-to(x-large) {
-        max-width: 1400px;
+        max-width: 1500px;
+      }
+
+      @include respond-to(xx-large) {
+        // top: 49%;
       }
     }
 
@@ -110,14 +126,24 @@
       max-width: 500px;
       margin: 0 auto;
 
-      @include respond-to(x-small) {
+      @media only screen and (min-width: 375px) {
         padding-left: 1rem;
         padding-right: 1rem;
       }
 
-      @include respond-to(large) {
+      @include respond-to(x-small) {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+      }
+
+      @include respond-to(menu-break) {
         flex: 1;
         // font-size: .9rem;
+      }
+
+      @include respond-to(x-large) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
       }
     }
 
@@ -136,7 +162,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        @include respond-to(large) {
+        @include respond-to(menu-break) {
           border-bottom: none !important;
           transform: none !important;
           border-right: 1px solid #fff;
@@ -152,7 +178,7 @@
         }
       }
 
-      @include respond-to(large) {
+      @include respond-to(menu-break) {
         padding-bottom: 0;
 
       }
@@ -162,67 +188,53 @@
       // @include test(yellow);
       padding-top: 4.5rem;
 
-      @include respond-to(large) {
+      @include respond-to(menu-break) {
         padding-top: 0;
       }
+    }
+
+    @include respond-to(x-small) {
+      // margin-bottom: -4em;
+
     }
   }
 
   #content {
-    background-color: #ffffff;
-    position: relative;
-    z-index: 9999999;
-    // margin-top: -2em;
+    // margin-top: -6em;
 
     &:before {
-      // display: block;
-      position: absolute;
-      z-index: 9999999;
-      // top: -1em;
-      // width: 100%;
-      height: 50px;
-      background-image: url(/wp-content/themes/constellation/imgs/background-curve-x-lg.svg);
-      background-size: 100% auto;
-      background-position: 0 0;
-      background-repeat: no-repeat;
 
       @media only screen and (min-width: 375px) {
         // top: -2em;
-        // height: 40px;
       }
 
       @include respond-to(x-small) {
         // top: -4em;
-        height: 60px;
-        background-image: url(/wp-content/themes/constellation/imgs/background-curve-lg.svg);
+        // height: 60px;
       }
+
+      // @media only screen and (min-width: 700px) {
+      //   top: -3em;
+
+      // }
 
       @include respond-to(small) {
         // top: -4em;
-        height: 80px;
-        background-image: url(/wp-content/themes/constellation/imgs/background-curve-med.svg);
       }
 
       @include respond-to(medium) {
         // top: -4em;
-        height: 100px;
-        background-image: url(/wp-content/themes/constellation/imgs/background-curve-sm.svg);
       }
 
       @include respond-to(xx-large) {
-        // top: -5em;
-        height: 100px;
-        background-image: url(/wp-content/themes/constellation/imgs/background-curve-x-sm.svg);
+        // top: -10em;
       }
 
       @include respond-to(xxx-large) {
-        // width: 120%;
-        // margin-left: -10%;
       }
 
       @include respond-to(xxxx-large) {
-        // width: 150%;
-        // margin-left: -25%;
+        // top: -10em;
       }
     }
 
@@ -236,8 +248,17 @@
       }
     }
 
+    @include respond-to(x-small) {
+      margin-top: -2em;
+    }
+
+    @media only screen and (min-width: 700px) {
+      // margin-top: -4em;
+
+    }
+
     @include respond-to(small) {
-      margin-top: -2.5em;
+      margin-top: -5em;
     }
 
     @include respond-to(x-large) {
