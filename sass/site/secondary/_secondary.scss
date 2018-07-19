@@ -1,0 +1,20 @@
+#secondary {
+  margin-top: 2em;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 5px 0;
+
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+    }
+  }
+}

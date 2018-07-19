@@ -1,4 +1,16 @@
 .page-template-page-leadership {
+
+  h2 {
+    a {
+      color: $color__brand-1;
+      text-decoration: none;
+
+      &:visited {
+        color: $color__brand-1;
+      }
+    }
+  }
+
   .headshot {
 
     img {
