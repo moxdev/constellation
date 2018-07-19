@@ -1,6 +1,7 @@
 .home {
 
   .hero {
+    @include test(red);
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -15,6 +16,39 @@
       right: 0;
       background-color: $color__background-overlay;
       opacity: .6;
+    }
+
+    a {
+      color: #fff;
+
+      &:visited {
+        color: #fff;
+      }
+    }
+
+    video {
+      @include test(green);
+      display: block;
+      object-fit: cover;
+      position: relative;
+      z-index: -99999;
+      width: 100%;
+      height: 1000px;
+      // min-width: 100%;
+      // min-height: 100%;
+      // border: 10px solid yellow;
+
+      @include respond-to(small) {
+        height: 1100px;
+      }
+
+      @include respond-to(large) {
+        height: 800px;
+      }
+
+      @include respond-to(xx-large) {
+        height: 900px;
+      }
     }
 
     h2.hero-title {
@@ -40,39 +74,9 @@
       }
     }
 
-    a {
-      color: #fff;
-
-      &:visited {
-        color: #fff;
-      }
-    }
-
-    video {
-      display: block;
-      object-fit: cover;
-      position: relative;
-      z-index: -1;
-      width: 100%;
-      height: 1000px;
-      min-width: 100%;
-      min-height: 100%;
-      // border: 10px solid yellow;
-
-      @include respond-to(small) {
-        height: 1100px;
-      }
-
-      @include respond-to(large) {
-        height: 800px;
-      }
-
-      @include respond-to(xx-large) {
-        height: 900px;
-      }
-    }
-
     .hero-wrapper {
+      @include test(red);
+
       position: absolute;
       z-index: 3000;
       width: 100%;
@@ -169,47 +173,52 @@
   }
 
   #content {
+    @include test(orange);
     background-color: #ffffff;
     position: relative;
-    z-index: 40000;
+    z-index: 9999999;
     // margin-top: -2em;
 
     &:before {
-      display: block;
+      border: 3px solid green;
+      // display: block;
       position: absolute;
-      z-index: 50000;
+      z-index: 9999999;
       // top: -1em;
       // width: 100%;
-      height: 30px;
-      background-image: url(/wp-content/themes/constellation/imgs/curved-header-sprite.svg);
+      height: 50px;
+      background-image: url(/wp-content/themes/constellation/imgs/background-curve-x-lg.svg);
       background-size: 100% auto;
       background-position: 0 0;
       background-repeat: no-repeat;
 
       @media only screen and (min-width: 375px) {
         // top: -2em;
-        height: 40px;
+        // height: 40px;
       }
 
       @include respond-to(x-small) {
-        // top: 0;
-        height: 100px;
-        background-position: 0 -285px;
-
+        // top: -4em;
+        height: 60px;
+        background-image: url(/wp-content/themes/constellation/imgs/background-curve-lg.svg);
       }
 
       @include respond-to(small) {
         // top: -4em;
-        height: 200px;
-        background-position: 0 -740px;
+        height: 80px;
+        background-image: url(/wp-content/themes/constellation/imgs/background-curve-med.svg);
       }
 
-      @include respond-to(large) {
+      @include respond-to(medium) {
         // top: -4em;
+        height: 100px;
+        background-image: url(/wp-content/themes/constellation/imgs/background-curve-sm.svg);
       }
 
       @include respond-to(xx-large) {
         // top: -5em;
+        height: 100px;
+        background-image: url(/wp-content/themes/constellation/imgs/background-curve-x-sm.svg);
       }
 
       @include respond-to(xxx-large) {
