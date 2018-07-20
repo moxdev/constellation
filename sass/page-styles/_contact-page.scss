@@ -18,17 +18,24 @@
     margin: 2rem 0;
     width: 175px;
     border: none;
-    font-size: 1.1em;
-    text-transform: uppercase;
-    font-family: $font__medium;
     letter-spacing: 2px;
+    cursor: pointer;
+  }
 
-    @include respond-to(x-small) {
-      // width: 50%;
+  .g-recaptcha {
+    overflow: hidden;
+  }
+
+  .msg-box > div {
+    color: red;
+    text-align: left;
+
+    &:first-child {
+      margin-top: 2em;
     }
 
-    @include respond-to(small) {
-      // width: 30%;
+    &:last-child {
+      margin-bottom: 1em;
     }
   }
 }

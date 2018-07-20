@@ -29,16 +29,16 @@
         justify-content: space-between;
       }
 
-      h2 {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-
       .col-1 {
         flex: 1 1 20%;
         text-align: center;
         margin-top: 0;
         margin-bottom: 0;
+
+        h2 {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
       }
 
       .col-2 {

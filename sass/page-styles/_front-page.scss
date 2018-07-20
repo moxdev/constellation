@@ -8,7 +8,6 @@
     &:after {
       content: '';
       position: absolute;
-      z-index: -1;
       top: 0;
       right: 0;
       bottom: 0;
@@ -85,6 +84,7 @@
     }
 
     .hero-wrapper {
+      // @include test(red);
       position: absolute;
       z-index: 3000;
       width: 100%;
@@ -127,6 +127,7 @@
 
     .hero-callout-left,
     .hero-callout-right {
+      // @include test(yellow);
       max-width: 500px;
       margin: 0 auto;
 
@@ -141,7 +142,8 @@
       }
 
       @include respond-to(menu-break) {
-        flex: 1;
+        width: 50%;
+        flex: 1 1 50%;
         // font-size: .9rem;
       }
 
@@ -178,13 +180,12 @@
         }
 
         @include respond-to(x-large) {
-          margin-left: 14%;
+          margin-left: 19%;
         }
       }
 
       @include respond-to(menu-break) {
         padding-bottom: 0;
-
       }
     }
 
@@ -206,41 +207,41 @@
   #content {
     // margin-top: -6em;
 
-    &:before {
+    // &:before {
 
-      @media only screen and (min-width: 375px) {
-        // top: -2em;
-      }
+    //   @media only screen and (min-width: 375px) {
+    //     // top: -2em;
+    //   }
 
-      @include respond-to(x-small) {
-        // top: -4em;
-        // height: 60px;
-      }
+    //   @include respond-to(x-small) {
+    //     // top: -4em;
+    //     // height: 60px;
+    //   }
 
-      // @media only screen and (min-width: 700px) {
-      //   top: -3em;
+    //   // @media only screen and (min-width: 700px) {
+    //   //   top: -3em;
 
-      // }
+    //   // }
 
-      @include respond-to(small) {
-        // top: -4em;
-      }
+    //   @include respond-to(small) {
+    //     // top: -4em;
+    //   }
 
-      @include respond-to(medium) {
-        // top: -4em;
-      }
+    //   @include respond-to(medium) {
+    //     // top: -4em;
+    //   }
 
-      @include respond-to(xx-large) {
-        // top: -10em;
-      }
+    //   @include respond-to(xx-large) {
+    //     // top: -10em;
+    //   }
 
-      @include respond-to(xxx-large) {
-      }
+    //   @include respond-to(xxx-large) {
+    //   }
 
-      @include respond-to(xxxx-large) {
-        // top: -10em;
-      }
-    }
+    //   @include respond-to(xxxx-large) {
+    //     // top: -10em;
+    //   }
+    // }
 
     h1.entry-title {
       color: $color__brand-1;

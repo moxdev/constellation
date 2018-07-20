@@ -1,57 +1,55 @@
 #colophon {
- color: #fff;
- font-family: $font__reg;
- text-align: center;
+  color: #fff;
+  font-family: $font__reg;
+  text-align: center;
 
- a {
-   color: #fff;
- }
+  a {
+    color: #fff;
+  }
 
- .footer-wrapper {
-   @include padding-left-right;
-   @include section-padding(2);
- }
+  .footer-wrapper {
+    @include padding-left-right;
+    @include section-padding(2);
+  }
 
- .flex-wrapper {
-   @include respond-to(medium) {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-   }
- }
+  .flex-wrapper {
+    @include respond-to(medium) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 
- .footer-logo, .social, .copyright {
-   margin-bottom: 1em;
+  .footer-logo, .social, .copyright {
+   //  margin-bottom: 1em;
+    @include respond-to(medium) {
+      margin-bottom: 0;
+    }
+  }
 
-   @include respond-to(medium) {
-     margin-bottom: 0;
-   }
- }
-
- .footer-logo {
+  .footer-logo {
 
     svg {
+      // display: block;
+      // margin: 0 auto;
       width: 200px;
       height: 45px;
     }
-
     @include respond-to(medium) {
       flex: 1 1 20%;
-      text-align-last: left;
+      text-align: left;
     }
- }
+  }
 
- .social {
+  .social {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-
     .social-header {
       font-size: 0.875rem;
       padding-right: 1rem;
     }
-
     .social-media {
       //  @include test(yellow);
       list-style: none;
@@ -178,40 +176,35 @@
          }
        }
      }
-   }
+    }
+    @include respond-to(medium) {
+      flex: 1 1 30%;
+      text-align: center;
+    }
+  }
 
-   @include respond-to(medium) {
-     flex: 1 1 30%;
-     text-align: center;
-   }
- }
+  .copyright {
+    font-size: 0.875rem;
+    @include respond-to(medium) {
+      flex: 1 1 30%;
+      text-align: right;
+    }
+    @include respond-to(medium) {
+      font-size: .8rem;
+    }
+  }
 
- .copyright {
-   font-size: 0.875rem;
-
-   @include respond-to(medium) {
-     flex: 1 1 30%;
-     text-align: right;
-   }
-
-   @include respond-to(medium) {
-     font-size: .8rem;
-   }
- }
-
- .mm4 {
-   font-size: 0.75rem;
-
-   a {
-     text-decoration: none;
-   }
-   svg {
-     margin-left: 1em;
-   }
-
-   @include respond-to(medium) {
-     flex: 0 0 100%;
-     text-align: right;
-   }
- }
+  .mm4 {
+    font-size: 0.75rem;
+    a {
+      text-decoration: none;
+    }
+    svg {
+      margin-left: 1em;
+    }
+    @include respond-to(medium) {
+      flex: 0 0 100%;
+      text-align: right;
+    }
+  }
 }

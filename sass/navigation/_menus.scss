@@ -1,4 +1,5 @@
 .main-navigation {
+
 	// padding-top: 1rem;
 
 	ul {
@@ -40,6 +41,8 @@
 
 			a {
 				width: 400px;
+				// font-family: $font__reg-bold;
+				text-transform: none;
 				text-align: left;
 				line-height: 1.2;
 				padding: 1em;
