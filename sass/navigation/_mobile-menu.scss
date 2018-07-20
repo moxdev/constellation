@@ -31,6 +31,32 @@
     text-align: center;
     list-style: none;
     width: 100%;
+
+    ul {
+      max-height: 0px;
+      margin: 0;
+      padding: 0 2em 0;
+      overflow: hidden;
+      width: 100%;
+      transition: max-height .25s;
+
+      &.active {
+        display: block;
+      }
+
+      li {
+        padding: 1em;
+
+        &:first-child {
+          padding-top: 2em;
+        }
+      }
+      a {
+        text-transform: none;
+        font-size: 1em;
+        padding: 0 !important;
+      }
+    }
   }
 
   li {
@@ -47,35 +73,12 @@
   }
 
   a {
-    // @include font-smooth;
     letter-spacing: 2px;
     color: #fff;
     font-family: $font__medium;
     text-transform: uppercase;
     text-decoration: none;
-  }
-
-  .sub-menu {
-    max-height: 0px;
-    margin: 0;
-    padding: 0 2em 0;
-    opacity: 0;
-    transition: .25s;
-
-    &.active {
-      opacity: 1;
-    }
-
-    li {
-      padding: 1em;
-
-      &:first-child {
-        padding-top: 2em;
-      }
-    }
-    a {
-      text-transform: none;
-    }
+    font-size: 1.2em;
   }
 
   .icon-plus {
@@ -88,5 +91,11 @@
 
   &.open {
     transform: translateX(0%);
+  }
+
+  .menu-item-has-children {
+    a {
+      padding-left: 15px;
+    }
   }
 }
