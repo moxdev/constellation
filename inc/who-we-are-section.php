@@ -12,7 +12,7 @@ function constellation_who_we_are_section() {
 
 		if( $certifications || $core_values ): ?>
 
-		<section class="who-we-are">
+		<section class="who-we-are hentry">
 
 			<div class="flex-wrapper">
 

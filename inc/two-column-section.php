@@ -20,7 +20,7 @@ function constellation_two_column_section() {
 
 				<?php if( $img ) : ?>
 
-					<div class='col-1 flex-child'>
+					<div class='image-wrapper'>
 						<img src="<?php echo esc_url( $img['sizes']['two-column-image'] ); ?>" alt="<?php echo esc_attr( $img['alt'] ); ?>" description="<?php echo esc_attr( $img['description'] ); ?>">
 
 						<?php if( $title ) : ?>
@@ -35,7 +35,7 @@ function constellation_two_column_section() {
 
 				<?php if( $content ) : ?>
 
-					<div class='col-2 flex-child'>
+					<div class='content-wrapper'>
 
 						<?php echo wp_kses_post( $content ); ?>
 
