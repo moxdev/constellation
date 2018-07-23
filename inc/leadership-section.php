@@ -9,7 +9,7 @@ function constellation_leadership_section() {
 	if( function_exists( 'get_field' ) ) :
 		if( have_rows('leadership') ): ?>
 
-		<section class="leadership">
+		<section class="leadership hentry">
 
 			<?php while( have_rows('leadership') ): the_row();
 				$img = get_sub_field('image');

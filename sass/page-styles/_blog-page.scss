@@ -24,6 +24,12 @@
     }
   }
 
+  #content::before {
+    @include respond-to(large) {
+      top: -3em;
+    }
+  }
+
   article {
     margin-bottom: 2em;
   }

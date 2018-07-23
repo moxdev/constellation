@@ -33,6 +33,14 @@
     }
   }
 
+  .flex-wrapper {
+    &:first-child {
+      h2 {
+        margin-top: .5em;
+      }
+    }
+  }
+
   @include respond-to(small) {
     .flex-wrapper {
       display: flex;
@@ -47,5 +55,12 @@
     .bio {
       flex: 1 1 60%;
     }
+  }
+
+  @include respond-to(large) {
+    #content::before {
+      // top: -3em;
+    }
+
   }
 }
