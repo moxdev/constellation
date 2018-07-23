@@ -11,6 +11,9 @@
 --------------------------------------------------------------*/
 @import "primary/comments";
 
+/*--------------------------------------------------------------
+## Site-wide Styles
+--------------------------------------------------------------*/
 #page {
   position: relative;
   overflow-x: hidden;
@@ -50,19 +53,15 @@
     }
 
     @include respond-to(medium) {
-      top: -3em;
       height: 100px;
       background-image: url(/wp-content/themes/constellation/imgs/background-curve-sm.svg);
     }
-
 
     @include respond-to(large) {
       top: -5em;
     }
 
     @include respond-to(xx-large) {
-      top: -5em;
-      // height: 150px;
       background-image: url(/wp-content/themes/constellation/imgs/background-curve-x-sm.svg);
     }
 
@@ -82,17 +81,8 @@
     margin-top: -1em;
   };
 
-  @include respond-to(x-small) {
-
-
-  }
-
   @include respond-to(small) {
     margin-top: -2.5em;
-  }
-
-  @include respond-to(x-large) {
-    // margin-top: -4em;
   }
 }
 
