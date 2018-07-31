@@ -16,7 +16,7 @@ function constellation_custom_header_section() {
         $hero_content_left  = get_field( 'home_hero_content_left' );
 				$hero_content_right = get_field( 'home_hero_content_right' ); ?>
 
-				<video src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/constellation/media/low-6729115-preview.mp4" loop autoplay muted playsinline poster="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/constellation/imgs/video-poster-space.jpg"></video>
+				<video src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/constellation/media/constellation-space-video.mov" loop autoplay muted playsinline poster="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/constellation/media/constellation-space-video-poster.jpg"></video>
 
 				<div class='hero-wrapper'>
 					<div class="hero-callout-left">

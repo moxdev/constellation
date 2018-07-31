@@ -4,7 +4,21 @@
 
     a {
       text-decoration: none;
+
+      &:hover {
+
+        h2 {
+          color: $color__brand-4;
+          cursor: pointer;
+        }
+
+        img {
+          filter: brightness(.9);
+          cursor: pointer;
+        }
+      }
     }
+
     img {
       width: 130px;
 

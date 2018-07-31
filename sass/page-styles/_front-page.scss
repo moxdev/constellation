@@ -68,7 +68,7 @@
         content: "";
         position: absolute;
         z-index: -1;
-        background-image: url(/wp-content/themes/constellation/imgs/red-swoosh.png);
+        background-image: url(/wp-content/themes/constellation/imgs/red-swoosh.svg);
         background-repeat: no-repeat;
         background-size: auto 100%;
         background-position: right top;
@@ -84,7 +84,6 @@
     }
 
     .hero-wrapper {
-      // @include test(red);
       position: absolute;
       z-index: 3000;
       width: 100%;
@@ -123,13 +122,14 @@
       font-family: $font__black;
       text-transform: uppercase;
       position: relative;
+      transform: translateZ(0);
     }
 
     .hero-callout-left,
     .hero-callout-right {
-      // @include test(yellow);
       max-width: 500px;
       margin: 0 auto;
+      transform: translateZ(0);
 
       @media only screen and (min-width: 375px) {
         padding-left: 1rem;

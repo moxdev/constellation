@@ -12,7 +12,7 @@ ol {
 }
 
 li {
-	margin: 0;
+	margin: 0 0 .5em;
 	padding: 0;
 }
 
@@ -20,6 +20,11 @@ li > ul,
 li > ol {
 	margin-bottom: 0;
 	margin-left: 0;
+	list-style: circle;
+
+	li {
+		margin:0;
+	}
 }
 
 dt {

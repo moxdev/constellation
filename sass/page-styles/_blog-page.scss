@@ -12,7 +12,7 @@
         content: "";
         position: absolute;
         z-index: -1;
-        background-image: url(/wp-content/themes/constellation/imgs/red-swoosh.png);
+        background-image: url(/wp-content/themes/constellation/imgs/red-swoosh.svg);
         background-repeat: no-repeat;
         background-size: auto 100%;
         background-position: right top;
@@ -24,33 +24,14 @@
     }
   }
 
-  #content::before {
-    @include respond-to(large) {
-      top: -3em;
-    }
-  }
-
   article {
-    margin-bottom: 2em;
-  }
-
-  h1 {
-    color: $color__brand-1;
-    text-align: left;
-    display: block;
-    padding-right: 0;
-    margin-top: 0;
-
-    &:after {
-      display: none;
-    }
+    margin-bottom: 4em;
   }
 
   h2 {
     margin-top: 0;
 
     a {
-      // text-decoration: none;
 
       &:hover {
         color: $color__brand-4;
@@ -67,7 +48,7 @@
   }
 
   .entry-footer {
-    margin-top: 1em;
+    // margin-top: 0;
 
     span {
       margin-right: 1em;
@@ -133,4 +114,37 @@
     }
   }
 }
+
+.blog, .single.single-post {
+  #secondary {
+    margin-top: 2em;
+  }
+}
+
+.single.single-post, .archive {
+
+  .feature-header {
+    h1.entry-title {
+      margin-top: 0.5em !important;
+    }
+
+  }
+
+  h1 {
+    color: $color__brand-1;
+    text-align: left;
+    display: block;
+    padding-right: 0;
+    margin-top: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.archive .wrapper {
+  padding-top: 2em;
+}
+
 
