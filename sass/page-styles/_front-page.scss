@@ -27,7 +27,6 @@
     video {
       display: block;
       object-fit: cover;
-      font-family: "object-fit: cover";
       position: relative;
       z-index: -1;
       width: 100%;
@@ -52,7 +51,7 @@
       }
 
       @include respond-to(x-large) {
-        height: 1000px;
+        height: auto;
       }
     }
 
@@ -106,15 +105,20 @@
 
       @include respond-to(large) {
         top: 49%;
-
       };
 
       @include respond-to(x-large) {
         max-width: 1500px;
       }
 
-      @include respond-to(xx-large) {
-        // top: 49%;
+      @media only screen and (min-width: 2000px) {
+        top: 40%;
+        font-size: 1.2em;
+        max-width: 1700px;
+      }
+
+      @media only screen and (min-width: 2400px) {
+        top: 42%;
       }
     }
 
@@ -182,6 +186,10 @@
         @include respond-to(x-large) {
           margin-left: 19%;
         }
+
+        @media only screen and (min-width: 2000px) {
+          margin-left: 29%;
+        }
       }
 
       @include respond-to(menu-break) {
@@ -197,51 +205,9 @@
         padding-top: 0;
       }
     }
-
-    @include respond-to(x-small) {
-      // margin-bottom: -4em;
-
-    }
   }
 
   #content {
-    // margin-top: -6em;
-
-    // &:before {
-
-    //   @media only screen and (min-width: 375px) {
-    //     // top: -2em;
-    //   }
-
-    //   @include respond-to(x-small) {
-    //     // top: -4em;
-    //     // height: 60px;
-    //   }
-
-    //   // @media only screen and (min-width: 700px) {
-    //   //   top: -3em;
-
-    //   // }
-
-    //   @include respond-to(small) {
-    //     // top: -4em;
-    //   }
-
-    //   @include respond-to(medium) {
-    //     // top: -4em;
-    //   }
-
-    //   @include respond-to(xx-large) {
-    //     // top: -10em;
-    //   }
-
-    //   @include respond-to(xxx-large) {
-    //   }
-
-    //   @include respond-to(xxxx-large) {
-    //     // top: -10em;
-    //   }
-    // }
 
     h1.entry-title {
       color: $color__brand-1;
@@ -257,19 +223,13 @@
       margin-top: -2em;
     }
 
-    @media only screen and (min-width: 700px) {
-      // margin-top: -4em;
-
-    }
-
     @include respond-to(small) {
       margin-top: -5em;
     }
 
-    @include respond-to(x-large) {
-      // margin-top: -4em;
+    @media only screen and (min-width: 2000px) {
+      margin-top: -17em;
+      padding-bottom: 2.5em;
     }
-
-
   }
 }
